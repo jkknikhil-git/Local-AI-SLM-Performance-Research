@@ -23,7 +23,7 @@ This project intentionally targets constrained hardware to document the real-wor
 
 ## Project Phases
 
-### Phase 1 — Inference Benchmarking
+### Phase 1 — Inference Benchmarking ✅
 
 Rigorous measurement of model inference performance across key metrics:
 
@@ -32,11 +32,11 @@ Rigorous measurement of model inference performance across key metrics:
 - **Total Response Latency** — end-to-end wall-clock time
 - **RAM delta** — memory footprint before vs. after model load
 - **CPU utilization** — average % during active generation
-- **Cold start vs. warm start** — model load time on first vs. subsequent runs
+- **Cold start vs. warm start** — first-run vs. subsequent-run performance
 
-Results are written to `phase1_benchmarking/results/` as structured JSON for reproducibility.
+Results committed to [`Phase1/results/`](./Phase1/results/) as structured JSON for reproducibility.
 
-### Phase 2 — Structured Output & Determinism
+### Phase 2 — Structured Output & Determinism 🔄
 
 Enforcing structure and reliability on top of raw generation:
 
@@ -45,7 +45,7 @@ Enforcing structure and reliability on top of raw generation:
 - Retry mechanism: one automatic re-prompt on schema failure, then graceful degradation
 - **Temperature experiment**: identical prompt set run at `0.0` and `0.7`, with variance in outputs carefully documented
 
-### Phase 3 — Multi-Model Comparison Study
+### Phase 3 — Multi-Model Comparison Study 🔄
 
 Side-by-side benchmark of four SLMs on identical hardware, identical prompts, identical conditions:
 
@@ -58,15 +58,41 @@ Side-by-side benchmark of four SLMs on identical hardware, identical prompts, id
 
 Standardized prompt bank of 30–50 prompts spanning reasoning, coding, factual recall, and instruction-following. Quantized variants (Q4\_K\_M vs Q8\_0) tested where hardware permits.
 
-Full technical report with real benchmark numbers and analysis in [`phase3_comparison/report/`](./phase3_comparison/report/).
+Full technical report in [`Phase3/report/`](./Phase3/report/).
 
 ---
 
 ## Results
 
-> Results will be populated as benchmarks complete.
-> - Phase 1 results → [`phase1_benchmarking/results/`](./phase1_benchmarking/results/)
-> - Phase 3 report → [`phase3_comparison/report/`](./phase3_comparison/report/)
+### Phase 1 — Llama 3.1 8B (CPU-only, Q4_K_M)
+
+Benchmark run on i5-11320H · 16GB RAM · No GPU · Windows 11
+
+| Metric | Value |
+|--------|-------|
+| Tokens per second (warm avg) | **6.45 TPS** |
+| Time to first token (warm avg) | **0.644s** |
+| Time to first token (cold) | 2.013s |
+| Cold TTFT penalty | +1.37s |
+| CPU utilization (avg) | ~59% |
+
+**Per-category breakdown (warm runs):**
+
+| Category | TPS | TTFT (s) | Latency (s) | Avg Tokens |
+|----------|-----|----------|-------------|------------|
+| Factual | 7.11 | 0.625 | 5.2 | 32 |
+| Reasoning | 6.41 | 0.639 | 32.3 | 203 |
+| Coding | 5.96 | 0.649 | 50.8 | 300 |
+| Instruction | 6.32 | 0.648 | 15.6 | 94 |
+| Long-form | 6.44 | 0.663 | 35.1 | 221 |
+
+**Key findings:**
+- TPS is remarkably stable across prompt types (5.81–7.47 range) — throughput is CPU-bound, not task-bound
+- Sub-second TTFT on warm runs despite CPU-only inference
+- Cold TTFT penalty (1.37s) is from CPU cache warmup, not model loading — Ollama keeps the model resident in RAM
+- Latency scales almost linearly with token count: tokens ÷ 6.45 ≈ wait time in seconds
+
+Full results JSON → [`Phase1/results/`](./Phase1/results/)
 
 ---
 
@@ -81,8 +107,8 @@ Full technical report with real benchmark numbers and analysis in [`phase3_compa
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/local-ai-inference-benchmark.git
-cd local-ai-inference-benchmark
+git clone https://github.com/jkknikhil-git/Local-AI-SLM-Performance-Research.git
+cd Local-AI-SLM-Performance-Research
 
 python -m venv .venv
 
@@ -101,37 +127,39 @@ ollama pull qwen3.5:4b
 ollama pull qwen3.5:9b
 ```
 
-> Pull time and disk space will vary. Expect 2–6GB per model at default Q4 quantization.
+### Run Phase 1 Benchmark
+
+```bash
+cd Phase1
+python benchmark.py --model llama3.1:8b
+python benchmark.py --model llama3.1:8b --warm-runs 5
+python benchmark.py --model llama3.1:8b --no-cold
+```
 
 ---
 
 ## Project Structure
 
 ```
-local-ai-inference-benchmark/
+Local-AI-SLM-Performance-Research/
 │
-├── utils/
-│   └── ollama_client.py        # Shared Ollama wrapper (timing, retries, resource monitoring)
+├── Phase1/
+│   ├── ollama_client.py        # Shared Ollama wrapper (TTFT capture, CPU monitoring, RAM delta)
+│   ├── benchmark.py            # CLI benchmark runner with rich terminal output
+│   ├── prompts.py              # 10-prompt standardized benchmark suite
+│   └── results/                # Timestamped JSON output (committed for reproducibility)
 │
-├── phase1_benchmarking/
-│   ├── benchmark.py            # Core benchmark runner
-│   └── results/                # JSON output files (committed for reproducibility)
+├── Phase2/                     # Structured output + temperature experiments (in progress)
 │
-├── phase2_structured/
-│   ├── schemas.py              # Pydantic models and JSON schemas
-│   ├── inference.py            # Structured output + retry logic
-│   └── temperature_exp.py      # Temp 0.0 vs 0.7 experiment runner
-│
-├── phase3_comparison/
-│   ├── test_prompts.py         # Standardized prompt bank
-│   ├── comparison_runner.py    # Runs all models on all prompts
+├── Phase3/                     # Multi-model comparison study (in progress)
 │   └── report/                 # Technical report with numbers and analysis
+│
+├── .vscode/
+│   ├── extensions.json         # Recommended VSCode extensions
+│   └── launch.json             # Debug configurations
 │
 ├── docs/
 │   └── notes.md                # Running project notes and observations
-│
-├── .vscode/
-│   └── extensions.json         # Recommended VSCode extensions
 │
 ├── requirements.txt
 ├── LICENSE
@@ -146,7 +174,7 @@ local-ai-inference-benchmark/
 |------|---------|
 | [Ollama](https://ollama.com) | Local model serving (CPU inference) |
 | Python 3.11 | Core language |
-| [Pydantic v2](https://docs.pydantic.dev) | JSON schema validation |
+| [Pydantic v2](https://docs.pydantic.dev) | JSON schema validation (Phase 2) |
 | [psutil](https://psutil.readthedocs.io) | System resource monitoring |
 | [rich](https://rich.readthedocs.io) | Terminal output and progress display |
 | pytest | Unit tests for retry/validation logic |
