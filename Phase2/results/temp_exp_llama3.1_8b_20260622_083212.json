@@ -1,0 +1,1205 @@
+{
+  "experiment": "temperature_0.0_vs_0.7",
+  "model": "llama3.1:8b",
+  "schema": "SentimentAnalysis",
+  "runs_per_temp": 5,
+  "run_date": "2026-06-22T08:32:12",
+  "variance_summary": {
+    "sentiment_positive": {
+      "0.0": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 1,
+        "unique_phrase_sets": 1,
+        "avg_confidence": 0.95,
+        "confidence_stdev": 0.0
+      },
+      "0.7": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 5,
+        "unique_phrase_sets": 4,
+        "avg_confidence": 0.958,
+        "confidence_stdev": 0.018
+      }
+    },
+    "sentiment_negative": {
+      "0.0": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 2,
+        "unique_phrase_sets": 1,
+        "avg_confidence": 0.95,
+        "confidence_stdev": 0.0
+      },
+      "0.7": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 5,
+        "unique_phrase_sets": 3,
+        "avg_confidence": 0.98,
+        "confidence_stdev": 0.027
+      }
+    },
+    "sentiment_neutral": {
+      "0.0": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 1,
+        "unique_phrase_sets": 1,
+        "avg_confidence": 0.8,
+        "confidence_stdev": 0.0
+      },
+      "0.7": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 4,
+        "unique_phrase_sets": 1,
+        "avg_confidence": 0.894,
+        "confidence_stdev": 0.072
+      }
+    },
+    "sentiment_mixed": {
+      "0.0": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 1,
+        "unique_phrase_sets": 1,
+        "avg_confidence": 0.8,
+        "confidence_stdev": 0.0
+      },
+      "0.7": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 1.0,
+        "unique_explanations": 5,
+        "unique_phrase_sets": 3,
+        "avg_confidence": 0.766,
+        "confidence_stdev": 0.061
+      }
+    },
+    "sentiment_subtle": {
+      "0.0": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 0.8,
+        "unique_explanations": 2,
+        "unique_phrase_sets": 2,
+        "avg_confidence": 0.8,
+        "confidence_stdev": 0.0
+      },
+      "0.7": {
+        "schema_success_rate": 1.0,
+        "sentiment_consistency": 0.8,
+        "unique_explanations": 5,
+        "unique_phrase_sets": 5,
+        "avg_confidence": 0.8,
+        "confidence_stdev": 0.0
+      }
+    }
+  },
+  "raw_runs": {
+    "sentiment_positive": {
+      "0.0": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "new library",
+              "staff are incredibly helpful",
+              "reading rooms are bright and spacious"
+            ],
+            "explanation": "The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"new library\",\n    \"staff are incredibly helpful\",\n    \"reading rooms are bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 52.6314,
+          "tokens_per_second": 5.06
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "new library",
+              "staff are incredibly helpful",
+              "reading rooms are bright and spacious"
+            ],
+            "explanation": "The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"new library\",\n    \"staff are incredibly helpful\",\n    \"reading rooms are bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 15.5948,
+          "tokens_per_second": 5.21
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "new library",
+              "staff are incredibly helpful",
+              "reading rooms are bright and spacious"
+            ],
+            "explanation": "The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"new library\",\n    \"staff are incredibly helpful\",\n    \"reading rooms are bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.5496,
+          "tokens_per_second": 6.0
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "new library",
+              "staff are incredibly helpful",
+              "reading rooms are bright and spacious"
+            ],
+            "explanation": "The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"new library\",\n    \"staff are incredibly helpful\",\n    \"reading rooms are bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 14.4694,
+          "tokens_per_second": 5.59
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "new library",
+              "staff are incredibly helpful",
+              "reading rooms are bright and spacious"
+            ],
+            "explanation": "The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"new library\",\n    \"staff are incredibly helpful\",\n    \"reading rooms are bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer is extremely satisfied with the new library, praising its staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 14.6638,
+          "tokens_per_second": 5.52
+        }
+      ],
+      "0.7": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.99,
+            "key_phrases": [
+              "new library",
+              "incredibly helpful staff",
+              "bright and spacious reading rooms"
+            ],
+            "explanation": "The text expresses admiration for the library's amenities, staff, and collection, indicating a highly positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.99,\n  \"key_phrases\": [\n    \"new library\",\n    \"incredibly helpful staff\",\n    \"bright and spacious reading rooms\"\n  ],\n  \"explanation\": \"The text expresses admiration for the library's amenities, staff, and collection, indicating a highly positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 15.9152,
+          "tokens_per_second": 5.2
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "absolutely wonderful",
+              "incredibly helpful staff",
+              "bright and spacious reading rooms",
+              "vast collection"
+            ],
+            "explanation": "The text expresses strong admiration for the library's facilities, staff, and collection, indicating a very positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"absolutely wonderful\",\n    \"incredibly helpful staff\",\n    \"bright and spacious reading rooms\",\n    \"vast collection\"\n  ],\n  \"explanation\": \"The text expresses strong admiration for the library's facilities, staff, and collection, indicating a very positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 16.4811,
+          "tokens_per_second": 5.51
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "absolutely wonderful",
+              "incredibly helpful",
+              "bright and spacious"
+            ],
+            "explanation": "The reviewer praises the library's staff, facilities, and collection, indicating a very positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"absolutely wonderful\",\n    \"incredibly helpful\",\n    \"bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer praises the library's staff, facilities, and collection, indicating a very positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.8463,
+          "tokens_per_second": 5.72
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "incredibly helpful",
+              "bright and spacious",
+              "vast"
+            ],
+            "explanation": "The text describes a pleasant experience with the library's staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"incredibly helpful\",\n    \"bright and spacious\",\n    \"vast\"\n  ],\n  \"explanation\": \"The text describes a pleasant experience with the library's staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.9358,
+          "tokens_per_second": 5.42
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The new library is absolutely wonderful. The staff are incredibly helpful, the reading rooms are bright and spacious, and the collection is vast. I could spend hours here every day.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "absolutely wonderful",
+              "incredibly helpful",
+              "bright and spacious"
+            ],
+            "explanation": "The reviewer is extremely pleased with the library's staff, facilities, and collection."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"absolutely wonderful\",\n    \"incredibly helpful\",\n    \"bright and spacious\"\n  ],\n  \"explanation\": \"The reviewer is extremely pleased with the library's staff, facilities, and collection.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.906,
+          "tokens_per_second": 5.89
+        }
+      ]
+    },
+    "sentiment_negative": {
+      "0.0": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold meal"
+            ],
+            "explanation": "The customer was extremely dissatisfied with their dining experience due to poor service, long wait times, and a subpar meal."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold meal\"\n  ],\n  \"explanation\": \"The customer was extremely dissatisfied with their dining experience due to poor service, long wait times, and a subpar meal.\"\n}",
+          "validation_error": null,
+          "latency_s": 15.9086,
+          "tokens_per_second": 5.87
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold meal"
+            ],
+            "explanation": "The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold meal\"\n  ],\n  \"explanation\": \"The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 14.9187,
+          "tokens_per_second": 5.15
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold meal"
+            ],
+            "explanation": "The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold meal\"\n  ],\n  \"explanation\": \"The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 15.1592,
+          "tokens_per_second": 5.09
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold meal"
+            ],
+            "explanation": "The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold meal\"\n  ],\n  \"explanation\": \"The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 15.5003,
+          "tokens_per_second": 4.97
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold meal"
+            ],
+            "explanation": "The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold meal\"\n  ],\n  \"explanation\": \"The customer was extremely dissatisfied with their dining experience, citing poor service and subpar food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.3495,
+          "tokens_per_second": 5.83
+        }
+      ],
+      "0.7": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 1.0,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold food"
+            ],
+            "explanation": "The customer had a severely negative experience with the service, citing long wait times, rude staff, and poor food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 1.0,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold food\"\n  ],\n  \"explanation\": \"The customer had a severely negative experience with the service, citing long wait times, rude staff, and poor food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.7562,
+          "tokens_per_second": 5.95
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold meal"
+            ],
+            "explanation": "The customer was extremely dissatisfied with their dining experience due to the poor service, long wait times, and subpar food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold meal\"\n  ],\n  \"explanation\": \"The customer was extremely dissatisfied with their dining experience due to the poor service, long wait times, and subpar food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.9263,
+          "tokens_per_second": 5.98
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 1.0,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold food"
+            ],
+            "explanation": "The customer had a poor dining experience due to subpar service, long wait times, and unsatisfactory food quality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 1.0,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold food\"\n  ],\n  \"explanation\": \"The customer had a poor dining experience due to subpar service, long wait times, and unsatisfactory food quality.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.7486,
+          "tokens_per_second": 5.92
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.95,
+            "key_phrases": [
+              "appalling service",
+              "rude waiter",
+              "cold food"
+            ],
+            "explanation": "The reviewer had a very poor dining experience due to the wait, attitude of the staff and quality of the meal."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.95,\n  \"key_phrases\": [\n    \"appalling service\",\n    \"rude waiter\",\n    \"cold food\"\n  ],\n  \"explanation\": \"The reviewer had a very poor dining experience due to the wait, attitude of the staff and quality of the meal.\"\n}",
+          "validation_error": null,
+          "latency_s": 14.4676,
+          "tokens_per_second": 5.53
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The service was appalling. We waited over an hour for our food, the waiter was rude, and when the meal finally arrived it was cold. We will not be returning.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 1.0,
+            "key_phrases": [
+              "service was appalling",
+              "waited over an hour for our food",
+              "waiter was rude"
+            ],
+            "explanation": "The customer had a poor dining experience due to long wait times, rudeness from the waiter and poor quality food."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 1.0,\n  \"key_phrases\": [\n    \"service was appalling\",\n    \"waited over an hour for our food\",\n    \"waiter was rude\"\n  ],\n  \"explanation\": \"The customer had a poor dining experience due to long wait times, rudeness from the waiter and poor quality food.\"\n}",
+          "validation_error": null,
+          "latency_s": 14.9383,
+          "tokens_per_second": 5.86
+        }
+      ]
+    },
+    "sentiment_neutral": {
+      "0.0": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.6489,
+          "tokens_per_second": 6.01
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 10.8916,
+          "tokens_per_second": 5.99
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.0119,
+          "tokens_per_second": 5.95
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 10.9738,
+          "tokens_per_second": 5.98
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 10.8744,
+          "tokens_per_second": 6.03
+        }
+      ],
+      "0.7": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.9,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information without expressing a clear opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.9,\n  \"key_phrases\": [\n    \"financial results\"\n  ,\"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information without expressing a clear opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 10.5813,
+          "tokens_per_second": 6.01
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.87,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report, without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.87,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report, without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.1793,
+          "tokens_per_second": 5.94
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text provides factual information about a report, without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text provides factual information about a report, without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.211,
+          "tokens_per_second": 5.92
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 1.0,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text reports factual information about a published report without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 1.0,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text reports factual information about a published report without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.3027,
+          "tokens_per_second": 5.9
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The report was published on Tuesday. It contains 42 pages and covers the financial results for the third quarter. A press conference is scheduled for Thursday morning.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.9,
+            "key_phrases": [
+              "financial results",
+              "third quarter"
+            ],
+            "explanation": "The text reports factual information about a report, without expressing any opinion or emotion."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.9,\n  \"key_phrases\": [\n    \"financial results\",\n    \"third quarter\"\n  ],\n  \"explanation\": \"The text reports factual information about a report, without expressing any opinion or emotion.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.1554,
+          "tokens_per_second": 5.94
+        }
+      ]
+    },
+    "sentiment_mixed": {
+      "0.0": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The text expresses overall dissatisfaction with the product due to software issues and poor customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The text expresses overall dissatisfaction with the product due to software issues and poor customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.6485,
+          "tokens_per_second": 6.01
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The text expresses overall dissatisfaction with the product due to software issues and poor customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The text expresses overall dissatisfaction with the product due to software issues and poor customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.6067,
+          "tokens_per_second": 5.74
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The text expresses overall dissatisfaction with the product due to software issues and poor customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The text expresses overall dissatisfaction with the product due to software issues and poor customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.2973,
+          "tokens_per_second": 5.95
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The text expresses overall dissatisfaction with the product due to software issues and poor customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The text expresses overall dissatisfaction with the product due to software issues and poor customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.6861,
+          "tokens_per_second": 6.22
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The text expresses overall dissatisfaction with the product due to software issues and poor customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The text expresses overall dissatisfaction with the product due to software issues and poor customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.2665,
+          "tokens_per_second": 5.9
+        }
+      ],
+      "0.7": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days",
+              "build quality is solid"
+            ],
+            "explanation": "The text has a negative sentiment due to the presence of phrases that describe problems with the product, such as 'software is buggy' and 'customer support took three days'. The mention of 'build quality is solid', while positive, does not outweigh the negative comments."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\",\n    \"build quality is solid\"\n  ],\n  \"explanation\": \"The text has a negative sentiment due to the presence of phrases that describe problems with the product, such as 'software is buggy' and 'customer support took three days'. The mention of 'build quality is solid', while positive, does not outweigh the negative comments.\"\n}",
+          "validation_error": null,
+          "latency_s": 18.8434,
+          "tokens_per_second": 6.14
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.7,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The positive features and build quality are outweighed by the significant issues with software bugs and poor customer support responsiveness."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.7,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The positive features and build quality are outweighed by the significant issues with software bugs and poor customer support responsiveness.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.6044,
+          "tokens_per_second": 6.15
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The product's positive features are overshadowed by significant issues with the software and customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The product's positive features are overshadowed by significant issues with the software and customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.8118,
+          "tokens_per_second": 6.28
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.83,
+            "key_phrases": [
+              "software is buggy",
+              "customer support took three days"
+            ],
+            "explanation": "The text expresses overall dissatisfaction with the product due to software issues and poor customer service."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.83,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support took three days\"\n  ],\n  \"explanation\": \"The text expresses overall dissatisfaction with the product due to software issues and poor customer service.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.3606,
+          "tokens_per_second": 5.85
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"The product has some genuinely impressive features and the build quality is solid. However, the software is buggy and customer support took three days to respond to a simple query.\"",
+          "parsed": {
+            "sentiment": "negative",
+            "confidence_score": 0.7,
+            "key_phrases": [
+              "software is buggy",
+              "customer support"
+            ],
+            "explanation": "The product has some good features, but the software issues and poor customer service outweigh them."
+          },
+          "raw_response": "{\n  \"sentiment\": \"negative\",\n  \"confidence_score\": 0.7,\n  \"key_phrases\": [\n    \"software is buggy\",\n    \"customer support\"\n  ],\n  \"explanation\": \"The product has some good features, but the software issues and poor customer service outweigh them.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.4592,
+          "tokens_per_second": 6.19
+        }
+      ]
+    },
+    "sentiment_subtle": {
+      "0.0": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "presentation was fine",
+              "covered the main points",
+              "finished on time"
+            ],
+            "explanation": "The speaker's tone is neutral, but they do express a slight positive sentiment towards the presentation's punctuality."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"presentation was fine\",\n    \"covered the main points\",\n    \"finished on time\"\n  ],\n  \"explanation\": \"The speaker's tone is neutral, but they do express a slight positive sentiment towards the presentation's punctuality.\"\n}",
+          "validation_error": null,
+          "latency_s": 14.8621,
+          "tokens_per_second": 6.1
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "covered the main points",
+              "finished on time"
+            ],
+            "explanation": "The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"covered the main points\",\n    \"finished on time\"\n  ],\n  \"explanation\": \"The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.24,
+          "tokens_per_second": 6.19
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "covered the main points",
+              "finished on time"
+            ],
+            "explanation": "The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"covered the main points\",\n    \"finished on time\"\n  ],\n  \"explanation\": \"The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.5422,
+          "tokens_per_second": 6.01
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "covered the main points",
+              "finished on time"
+            ],
+            "explanation": "The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"covered the main points\",\n    \"finished on time\"\n  ],\n  \"explanation\": \"The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 13.5257,
+          "tokens_per_second": 5.54
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.0,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "covered the main points",
+              "finished on time"
+            ],
+            "explanation": "The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"covered the main points\",\n    \"finished on time\"\n  ],\n  \"explanation\": \"The speaker seems to appreciate that the presentation was well-organized and timely, which is a positive sentiment.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.0407,
+          "tokens_per_second": 6.24
+        }
+      ],
+      "0.7": [
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "presentation was fine",
+              "covered the main points",
+              "finished on time"
+            ],
+            "explanation": "The text expresses a moderate opinion, neither very positive nor very negative."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"presentation was fine\",\n    \"covered the main points\",\n    \"finished on time\"\n  ],\n  \"explanation\": \"The text expresses a moderate opinion, neither very positive nor very negative.\"\n}",
+          "validation_error": null,
+          "latency_s": 11.9336,
+          "tokens_per_second": 6.25
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "main points",
+              "on time"
+            ],
+            "explanation": "The text has a neutral sentiment because it neither strongly praises nor criticizes the presentation, but rather provides a factual account of its performance."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"main points\",\n    \"on time\"\n  ],\n  \"explanation\": \"The text has a neutral sentiment because it neither strongly praises nor criticizes the presentation, but rather provides a factual account of its performance.\"\n}",
+          "validation_error": null,
+          "latency_s": 12.5676,
+          "tokens_per_second": 6.24
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "presentation",
+              "main points"
+            ],
+            "explanation": "The text expresses a neutral sentiment, as it neither strongly praises nor criticizes the presentation."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"presentation\",\n    \"main points\"\n  ],\n  \"explanation\": \"The text expresses a neutral sentiment, as it neither strongly praises nor criticizes the presentation.\"\n}",
+          "validation_error": null,
+          "latency_s": 10.919,
+          "tokens_per_second": 6.27
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "neutral",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "main points",
+              "last month"
+            ],
+            "explanation": "The speaker finds the presentation adequate but doesn't express enthusiasm or criticism."
+          },
+          "raw_response": "{\n  \"sentiment\": \"neutral\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"main points\",\n    \"last month\"\n  ],\n  \"explanation\": \"The speaker finds the presentation adequate but doesn't express enthusiasm or criticism.\"\n}",
+          "validation_error": null,
+          "latency_s": 10.4277,
+          "tokens_per_second": 6.31
+        },
+        {
+          "success": true,
+          "attempts": 1,
+          "model": "llama3.1:8b",
+          "schema_name": "SentimentAnalysis",
+          "temperature": 0.7,
+          "prompt": "Analyse the sentiment of this text:\n\n\"I suppose the presentation was fine. It covered the main points and finished on time, which is more than can be said for last month.\"",
+          "parsed": {
+            "sentiment": "positive",
+            "confidence_score": 0.8,
+            "key_phrases": [
+              "presentation",
+              "points"
+            ],
+            "explanation": "The speaker effectively conveyed the necessary information, meeting expectations."
+          },
+          "raw_response": "{\n  \"sentiment\": \"positive\",\n  \"confidence_score\": 0.8,\n  \"key_phrases\": [\n    \"presentation\",\n    \"points\"\n  ],\n  \"explanation\": \"The speaker effectively conveyed the necessary information, meeting expectations.\"\n}",
+          "validation_error": null,
+          "latency_s": 9.7324,
+          "tokens_per_second": 6.26
+        }
+      ]
+    }
+  }
+}
