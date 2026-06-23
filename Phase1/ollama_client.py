@@ -135,6 +135,7 @@ class OllamaClient:
         prompt_id: str = "unnamed",
         run_index: int = 0,
         run_type: str = "warm",
+        extra_options: dict = None,
     ) -> BenchmarkMetrics:
         """
         Generate a response and return a fully populated BenchmarkMetrics.
@@ -165,7 +166,7 @@ class OllamaClient:
         start_time = time.perf_counter()
 
         try:
-            for chunk in self._client.generate(model=model, prompt=prompt, stream=True):
+            for chunk in self._client.generate(model=model, prompt=prompt, stream=True, options=extra_options or {}):
                 if first_token_time is None and chunk.response:
                     first_token_time = time.perf_counter()
                 full_response += chunk.response

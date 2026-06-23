@@ -49,7 +49,6 @@ COMPARISON_MODELS = [
     "llama3.1:8b",
     "gemma4:e4b",
     "qwen3.5:4b",
-    "qwen3.5:9b",
 ]
 
 HARDWARE_META = {
@@ -67,7 +66,7 @@ console = Console()
 # Run single model
 # ---------------------------------------------------------------------------
 
-def run_model(model: str, runs_per_prompt: int = 2) -> dict:
+def run_model(model: str, runs_per_prompt: int = 2, num_ctx: int = 4096) -> dict:
     """
     Benchmark a single model across all comparison prompts.
     Returns a result dict ready for JSON serialisation.
@@ -99,11 +98,12 @@ def run_model(model: str, runs_per_prompt: int = 2) -> dict:
             # Cold run (discarded from averages but recorded)
             progress.update(task, description=f"[yellow]COLD[/yellow]  {prompt.id}")
             cold = client.benchmark_generate(
-                model=model,
-                prompt=prompt.text,
-                prompt_id=prompt.id,
-                run_index=0,
-                run_type="cold",
+               model=model,
+               prompt=prompt.text,
+               prompt_id=prompt.id,
+               run_index=0,
+               run_type="cold",
+               extra_options={"think": False} if "qwen" in model.lower() else {},
             )
             all_metrics.append(cold)
             progress.advance(task)
@@ -120,6 +120,7 @@ def run_model(model: str, runs_per_prompt: int = 2) -> dict:
                     prompt_id=prompt.id,
                     run_index=i + 1,
                     run_type="warm",
+                    extra_options={"think": False} if "qwen" in model.lower() else {},
                 )
                 all_metrics.append(warm)
                 progress.advance(task)
@@ -355,6 +356,7 @@ def main():
     group.add_argument("--all",    action="store_true", help="Run all 4 comparison models")
     group.add_argument("--report", action="store_true", help="Generate report from saved results")
     parser.add_argument("--runs",  type=int, default=2, help="Warm runs per prompt (default: 2)")
+    parser.add_argument("--num-ctx", type=int, default=4096, help="Context window size (default: 4096, use 16384 for Qwen thinking mode)")
     args = parser.parse_args()
 
     client = OllamaClient()
@@ -380,7 +382,7 @@ def main():
 
     for model in models_to_run:
         console.rule(f"[bold]{model}[/bold]")
-        result = run_model(model, runs_per_prompt=args.runs)
+        result = run_model(model, runs_per_prompt=args.runs, num_ctx=args.num_ctx)
         if result:
             save_model_result(model, result)
 
