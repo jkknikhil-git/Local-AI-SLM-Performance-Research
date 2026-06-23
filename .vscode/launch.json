@@ -2,11 +2,61 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Phase 1 — Benchmark",
+      "name": "Phase 1 — Benchmark (llama3.1:8b)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/Phase 1/benchmark.py",
+      "program": "${workspaceFolder}/Phase1/benchmark.py",
       "args": ["--model", "llama3.1:8b", "--warm-runs", "3"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/Phase1",
+      "justMyCode": true
+    },
+    {
+      "name": "Phase 1 — Benchmark (gemma4:e4b)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/Phase1/benchmark.py",
+      "args": ["--model", "gemma4:e4b", "--warm-runs", "3"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/Phase1",
+      "justMyCode": true
+    },
+    {
+      "name": "Phase 1 — Benchmark (qwen3.5:4b)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/Phase1/benchmark.py",
+      "args": ["--model", "qwen3.5:4b", "--warm-runs", "3"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/Phase1",
+      "justMyCode": true
+    },
+    {
+      "name": "Phase 2 — Temperature Experiment (llama3.1:8b)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/Phase2/temperature_exp.py",
+      "args": ["--model", "llama3.1:8b", "--runs", "5"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Phase 3 — Run Model (llama3.1:8b)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/Phase3/comparison_runner.py",
+      "args": ["--model", "llama3.1:8b"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Phase 3 — Generate Report",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/Phase3/comparison_runner.py",
+      "args": ["--report"],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "justMyCode": true
